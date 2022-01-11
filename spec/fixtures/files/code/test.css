@@ -1,0 +1,6 @@
+/* single line */
+body { body: black; }
+/*
+ * This is a multiline comment
+body { body: black; }
+ */

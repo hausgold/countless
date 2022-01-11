@@ -1,0 +1,139 @@
+CSS:
+  pattern: '**/*.css'
+  lines: 6
+  code_lines: 1
+  comment_lines: 5
+  classes: 0
+  methods: 0
+  m_over_c: 0
+  loc_over_m: 0
+
+SCSS:
+  pattern: '**/*.scss'
+  lines: 7
+  code_lines: 1
+  comment_lines: 6
+  classes: 0
+  methods: 0
+  m_over_c: 0
+  loc_over_m: 0
+
+HAML:
+  pattern: '**/*.haml'
+  lines: 7
+  code_lines: 4
+  comment_lines: 3
+  classes: 0
+  methods: 0
+  m_over_c: 0
+  loc_over_m: 0
+
+Rake:
+  pattern: '**/*.rake'
+  lines: 20
+  code_lines: 9
+  comment_lines: 8
+  classes: 0
+  methods: 1
+  m_over_c: 0
+  loc_over_m: 9
+
+Ruby:
+  pattern: '**/test.rb'
+  lines: 33
+  code_lines: 15
+  comment_lines: 12
+  classes: 2
+  methods: 2
+  m_over_c: 1
+  loc_over_m: 7
+
+RSpec:
+  pattern: '**/test_spec.rb'
+  lines: 31
+  code_lines: 23
+  comment_lines: 2
+  classes: 1
+  methods: 5
+  m_over_c: 5
+  loc_over_m: 4
+
+minitest:
+  pattern: '**/test_test.rb'
+  lines: 31
+  code_lines: 23
+  comment_lines: 1
+  classes: 2
+  methods: 6
+  m_over_c: 3
+  loc_over_m: 3
+
+CoffeeScript:
+  pattern: '**/*.coffee'
+  lines: 21
+  code_lines: 12
+  comment_lines: 5
+  classes: 1
+  methods: 2
+  m_over_c: 2
+  loc_over_m: 6
+
+JavaScript:
+  pattern: '**/*.js'
+  lines: 19
+  code_lines: 10
+  comment_lines: 8
+  classes: 1
+  methods: 1
+  m_over_c: 1
+  loc_over_m: 10
+
+JavaScript JSX:
+  pattern: '**/*.jsx'
+  lines: 29
+  code_lines: 19
+  comment_lines: 7
+  classes: 1
+  methods: 1
+  m_over_c: 1
+  loc_over_m: 19
+
+TypeScript:
+  pattern: '**/*.ts'
+  lines: 31
+  code_lines: 17
+  comment_lines: 9
+  classes: 1
+  methods: 2
+  m_over_c: 2
+  loc_over_m: 8
+
+TypeScript TSX:
+  pattern: '**/*.tsx'
+  lines: 31
+  code_lines: 18
+  comment_lines: 8
+  classes: 1
+  methods: 2
+  m_over_c: 2
+  loc_over_m: 9
+
+Rust:
+  pattern: '**/*.rs'
+  lines: 40
+  code_lines: 29
+  comment_lines: 5
+  classes: 1
+  methods: 6
+  m_over_c: 6
+  loc_over_m: 4
+
+C:
+  pattern: '**/*.c'
+  lines: 33
+  code_lines: 18
+  comment_lines: 5
+  classes: 0
+  methods: 2
+  m_over_c: 0
+  loc_over_m: 9
