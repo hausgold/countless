@@ -1,0 +1,107 @@
+CSS:
+  :pattern: !ruby/regexp /\.css$/
+  :lines: 6
+  :code_lines: 1
+  :classes: 0
+  :methods: 0
+  :m_over_c: 0
+  :loc_over_m: 0
+
+SCSS:
+  :pattern: !ruby/regexp /\.scss$/
+  :lines: 7
+  :code_lines: 1
+  :classes: 0
+  :methods: 0
+  :m_over_c: 0
+  :loc_over_m: 0
+
+HAML:
+  :pattern: !ruby/regexp /\.haml$/
+  :lines: 7
+  :code_lines: 4
+  :classes: 0
+  :methods: 0
+  :m_over_c: 0
+  :loc_over_m: 0
+
+Rake:
+  :pattern: !ruby/regexp /\.rake$/
+  :lines: 20
+  :code_lines: 9
+  :classes: 0
+  :methods: 1
+  :m_over_c: 0
+  :loc_over_m: 9
+
+Ruby:
+  :pattern: !ruby/regexp /^test\.rb$/
+  :lines: 33
+  :code_lines: 15
+  :classes: 2
+  :methods: 2
+  :m_over_c: 1
+  :loc_over_m: 7
+
+RSpec:
+  :pattern: !ruby/regexp /^test_spec\.rb$/
+  :lines: 31
+  :code_lines: 23
+  :classes: 1
+  :methods: 5
+  :m_over_c: 5
+  :loc_over_m: 4
+
+minitest:
+  :pattern: !ruby/regexp /^test_test\.rb$/
+  :lines: 31
+  :code_lines: 23
+  :classes: 2
+  :methods: 6
+  :m_over_c: 3
+  :loc_over_m: 3
+
+CoffeeScript:
+  :pattern: !ruby/regexp /\.coffee$/
+  :lines: 21
+  :code_lines: 12
+  :classes: 1
+  :methods: 2
+  :m_over_c: 2
+  :loc_over_m: 6
+
+JavaScript:
+  :pattern: !ruby/regexp /\.js$/
+  :lines: 19
+  :code_lines: 10
+  :classes: 1
+  :methods: 1
+  :m_over_c: 1
+  :loc_over_m: 10
+
+JavaScript JSX:
+  :pattern: !ruby/regexp /\.jsx$/
+  :lines: 29
+  :code_lines: 19
+  :classes: 1
+  :methods: 1
+  :m_over_c: 1
+  :loc_over_m: 19
+
+TypeScript:
+  :pattern: !ruby/regexp /\.ts$/
+  :lines: 31
+  :code_lines: 17
+  :classes: 1
+  :methods: 2
+  :m_over_c: 2
+  :loc_over_m: 8
+
+TypeScript TSX:
+  :pattern: !ruby/regexp /\.tsx$/
+  :lines: 31
+  :code_lines: 18
+  :classes: 1
+  :methods: 2
+  :m_over_c: 2
+  :loc_over_m: 9

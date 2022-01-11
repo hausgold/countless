@@ -1,9 +1,5 @@
 require:
   - rubocop-rspec
-  - rubocop-rails
-
-Rails:
-  Enabled: true
 
 Documentation:
   Enabled: true
@@ -17,6 +13,7 @@ AllCops:
     - vendor/**/*
     - build/**/*
     - gemfiles/**/*
+    - spec/fixtures/files/**/*
 
 Metrics/BlockLength:
   Exclude:
@@ -53,18 +50,6 @@ RSpec/NestedGroups:
 
 # Disable regular Rails spec paths.
 RSpec/FilePath:
-  Enabled: false
-
-# Because we just implemented the ActiveRecord API.
-Rails/SkipsModelValidations:
-  Enabled: false
-
-# We do not have a full Rails application here.
-Rails/ApplicationRecord:
-  Enabled: false
-
-# We do not have a full Rails application here.
-Rails/ApplicationJob:
   Enabled: false
 
 # Because +enqueued_jobs+ is a method not a memoized variable,
