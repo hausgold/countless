@@ -94,7 +94,7 @@ Afterwards the following Rake tasks are available to you:
 
 ```ruby
 # All the configured values here represent the Gem defaults.
-Countless.configure do |conf|
+Countless.configure do |config|
   # The base/root path of the project to work on. This path is used as a #
   # prefix to all relative path/file configurations. By default we check for a
   # Rake invokation (Rakefile location), a Rails invokation (project root) or
