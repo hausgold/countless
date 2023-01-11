@@ -83,7 +83,7 @@ RSpec.describe Countless::Statistics do
       end
 
       it 'returns nil' do
-        expect(action).to be(nil)
+        expect(action).to be_nil
       end
     end
 

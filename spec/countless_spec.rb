@@ -6,6 +6,6 @@ RSpec.describe Countless do
   before { described_class.reset_configuration! }
 
   it 'has a version number' do
-    expect(Countless::VERSION).not_to be nil
+    expect(Countless::VERSION).not_to be_nil
   end
 end

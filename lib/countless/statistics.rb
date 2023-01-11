@@ -135,7 +135,7 @@ module Countless
 
       # Calculate the correct column sizes
       col_sizes = col_sizes.values.each_with_object([]) do |widths, memo|
-        memo << widths.max + 2
+        memo << (widths.max + 2)
       end
 
       # Enforce the correct column sizes per row
