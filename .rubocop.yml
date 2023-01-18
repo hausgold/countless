@@ -1,13 +1,15 @@
 require:
   - rubocop-rspec
 
-Documentation:
+Style/Documentation:
   Enabled: true
 
 AllCops:
+  NewCops: enable
+  SuggestExtensions: false
   DisplayCopNames: true
   TargetRubyVersion: 2.5
-  SuggestExtensions: false
+  TargetRailsVersion: 5.2
   Exclude:
     - bin/**/*
     - vendor/**/*
@@ -22,6 +24,10 @@ Metrics/BlockLength:
     - spec/**/*.rb
     - '**/*.rake'
     - doc/**/*.rb
+
+# MFA is not yet enabled for our gems yet.
+Gemspec/RequireMFA:
+  Enabled: false
 
 # We stay with the original Ruby Style Guide recommendation.
 Layout/LineLength:

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'rspec/core/rake_task'
-require 'pp'
 
 desc 'Report code statistics (KLOCs, etc)'
 task :stats do
