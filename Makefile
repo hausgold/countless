@@ -20,13 +20,22 @@ GEMFILES_DIR ?= gemfiles
 BIN_DIR ?= bin
 
 # Host binaries
+AWK ?= awk
 BASH ?= bash
 CHMOD ?= chmod
 COMPOSE ?= docker-compose
+CP ?= cp
 CURL ?= curl
+DOCKER ?= docker
+EXPORT ?= export
+FIND ?= find
+GREP ?= grep
+HEAD ?= head
 ID ?= id
 MKDIR ?= mkdir
 RM ?= rm
+SORT ?= sort
+XARGS ?= xargs
 
 # Container binaries
 APPRAISAL ?= appraisal
