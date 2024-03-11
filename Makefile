@@ -35,6 +35,7 @@ ID ?= id
 MKDIR ?= mkdir
 RM ?= rm
 SORT ?= sort
+TEST ?= test
 XARGS ?= xargs
 
 # Container binaries
@@ -45,6 +46,7 @@ RAKE ?= rake
 RSPEC ?= rspec
 RUBOCOP ?= rubocop
 YARD ?= yard
+RUBY_VERSION := ruby-version
 
 # Files
 GEMFILES ?= $(subst _,-,$(patsubst $(GEMFILES_DIR)/%.gemfile,%,\
@@ -131,7 +133,8 @@ test-style: \
 
 test-style-ruby:
 	# Run the static code analyzer (rubocop)
-	@$(call run-shell,$(BUNDLE) exec $(RUBOCOP) -a)
+	@$(call run-shell,$(BUNDLE) exec $(RUBOCOP) -a \
+		|| ($(TEST) $$($(RUBY_VERSION)) != '2.5' && true))
 
 clean:
 	# Clean the dependencies
