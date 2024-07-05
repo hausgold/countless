@@ -43,7 +43,7 @@ $ bundle
 
 ## Requirements
 
-* [Ruby](https://www.ruby-lang.org/) (>=2.5, tested on CRuby/MRI only, may work
+* [Ruby](https://www.ruby-lang.org/) (>=2.7, tested on CRuby/MRI only, may work
   with other implementations as well)
 * [Perl](https://www.perl.org/) (>= 5.10, for the
   [cloc](https://github.com/AlDanial/cloc) utility)
