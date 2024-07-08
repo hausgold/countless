@@ -64,7 +64,7 @@ RSpec.describe Countless::Annotations do
     end
 
     it 'returns the correct formatted output' do
-      expect(action).to be_eql(output)
+      expect(action).to eql(output)
     end
   end
 end

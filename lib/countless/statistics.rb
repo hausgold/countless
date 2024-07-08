@@ -27,7 +27,7 @@ module Countless
       base_path = Countless.configuration.base_path
 
       # Resolve the given directory configurations to actual files
-      dirs = (dirs.presence || Countless.statistic_directories)
+      dirs = dirs.presence || Countless.statistic_directories
       @dirs = dirs.each_with_object([]) do |cur, memo|
         copy = cur.deep_dup
         copy[:files] = Array(copy[:files])
@@ -69,13 +69,13 @@ module Countless
     # @return [Hash{String => Hash{Symbol => Mixed}}] the statistics
     #   per configuration
     def calculate_statistics
-      @dirs.map do |conf|
+      @dirs.to_h do |conf|
         [
           conf[:name],
           conf.merge(stats: calculate_file_statistics(conf[:name],
                                                       conf[:files]))
         ]
-      end.to_h
+      end
     end
 
     # Setup a new +Calculator+ for the given directory/pattern in order to

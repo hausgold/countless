@@ -44,31 +44,31 @@ RSpec.describe Countless::Statistics do
         end
 
         it 'detected the correct amount of lines' do
-          expect(action.lines).to be_eql(conf[:lines])
+          expect(action.lines).to eql(conf[:lines])
         end
 
         it 'detected the correct amount of code lines' do
-          expect(action.code_lines).to be_eql(conf[:code_lines])
+          expect(action.code_lines).to eql(conf[:code_lines])
         end
 
         it 'detected the correct amount of comment lines' do
-          expect(action.comment_lines).to be_eql(conf[:comment_lines])
+          expect(action.comment_lines).to eql(conf[:comment_lines])
         end
 
         it 'detected the correct amount of classes' do
-          expect(action.classes).to be_eql(conf[:classes])
+          expect(action.classes).to eql(conf[:classes])
         end
 
         it 'detected the correct amount of methods' do
-          expect(action.methods).to be_eql(conf[:methods])
+          expect(action.methods).to eql(conf[:methods])
         end
 
         it 'calculates the correct methods per code' do
-          expect(action.m_over_c).to be_eql(conf[:m_over_c])
+          expect(action.m_over_c).to eql(conf[:m_over_c])
         end
 
         it 'calculates the correct lines of code per method' do
-          expect(action.loc_over_m).to be_eql(conf[:loc_over_m])
+          expect(action.loc_over_m).to eql(conf[:loc_over_m])
         end
       end
     end
@@ -101,31 +101,31 @@ RSpec.describe Countless::Statistics do
       end
 
       it 'detected the correct amount of lines' do
-        expect(action.lines).to be_eql(348)
+        expect(action.lines).to be(348)
       end
 
       it 'detected the correct amount of code lines' do
-        expect(action.code_lines).to be_eql(203)
+        expect(action.code_lines).to be(203)
       end
 
       it 'detected the correct amount of comment lines' do
-        expect(action.comment_lines).to be_eql(89)
+        expect(action.comment_lines).to be(89)
       end
 
       it 'detected the correct amount of classes' do
-        expect(action.classes).to be_eql(11)
+        expect(action.classes).to be(11)
       end
 
       it 'detected the correct amount of methods' do
-        expect(action.methods).to be_eql(30)
+        expect(action.methods).to be(30)
       end
 
       it 'calculates the correct methods per code' do
-        expect(action.m_over_c).to be_eql(2)
+        expect(action.m_over_c).to be(2)
       end
 
       it 'calculates the correct lines of code per method' do
-        expect(action.loc_over_m).to be_eql(6)
+        expect(action.loc_over_m).to be(6)
       end
     end
   end
