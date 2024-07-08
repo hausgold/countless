@@ -87,7 +87,7 @@ module Countless
       results = {}
 
       Dir.glob(file) do |item|
-        extension = \
+        extension =
           Annotation.extensions.detect { |regexp, _block| regexp.match(item) }
 
         if extension
@@ -145,7 +145,7 @@ module Countless
       #
       # @return [Array<String>] the configured files
       def self.files
-        @files ||= \
+        @files ||=
           Countless.configuration.annotations_files.deep_dup
       end
 
@@ -160,7 +160,7 @@ module Countless
       #
       # @return [Array<String>] the configured directories
       def self.directories
-        @directories ||= \
+        @directories ||=
           Countless.configuration.annotations_directories.deep_dup
       end
 
@@ -193,12 +193,12 @@ module Countless
       def self.extensions
         @extensions ||= begin
           patterns = Countless.configuration.annotation_patterns.values
-          patterns.map do |conf|
+          patterns.to_h do |conf|
             [
               extensions_regexp(conf[:extensions], conf[:files] || []),
               conf[:regex]
             ]
-          end.to_h
+          end
         end
       end
 

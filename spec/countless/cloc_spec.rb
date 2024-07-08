@@ -14,7 +14,7 @@ RSpec.describe Countless::Cloc do
     end
 
     it 'returns a hash with just the requested paths' do
-      expect(action.keys).to match_array([path.to_s])
+      expect(action.keys).to contain_exactly(path.to_s)
     end
 
     it 'returns a statistics hash per file with the relevant keys' do
