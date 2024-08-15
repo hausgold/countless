@@ -3,7 +3,7 @@
 # The gem version details.
 module Countless
   # The version of the +countless+ gem
-  VERSION = '1.3.3'
+  VERSION = '1.3.4'
 
   class << self
     # Returns the version of gem as a string.
