@@ -30,6 +30,6 @@ module Countless
   # Include top-level features
   include Extensions::ConfigurationHandling
 
-  # Make sure to eager load all SDK constants
+  # Make sure to eager load all constants
   loader.eager_load
 end
