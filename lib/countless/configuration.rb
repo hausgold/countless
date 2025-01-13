@@ -12,10 +12,10 @@ module Countless
     # prefix to all relative path/file configurations.
     config_accessor(:base_path) do
       # Check for a Rake invoked call
-      if defined? Rake
+      if defined?(Rake) && Rake.respond_to?(:application)
         path = Rake.application.rakefile_location
-        path = Rake.application.original_dir unless path.present?
-        next path
+        path ||= Rake.application.original_dir
+        next path if path.present?
       end
 
       # Check for Rails as fallback

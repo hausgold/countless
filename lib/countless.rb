@@ -15,11 +15,15 @@ require 'shellwords'
 
 # The top level namespace for the countless gem.
 module Countless
+  # Configure the relative gem code base location
+  root_path = Pathname.new("#{__dir__}/countless")
+
   # Setup a Zeitwerk autoloader instance and configure it
   loader = Zeitwerk::Loader.for_gem
 
   # Do not automatically load the Rake tasks
   loader.ignore("#{__dir__}/countless/rake_tasks.rb")
+  loader.do_not_eager_load(root_path.join('configuration.rb'))
 
   # Finish the auto loader configuration
   loader.setup
