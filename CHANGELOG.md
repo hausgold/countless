@@ -1,5 +1,9 @@
 ### next
 
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 1.4.2 (17 January 2025)
+
 * Added the logger dependency, see: https://bit.ly/3E8Zqg0 (#7)
 
 ### 1.4.1 (13 January 2025)
