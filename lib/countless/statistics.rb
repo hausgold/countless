@@ -5,8 +5,8 @@ module Countless
   #
   # Heavily stolen from: https://bit.ly/3qpvgfu
   #
-  # rubocop:disable Metrics/ClassLength because of the calculation
-  #   and formatting logic
+  # rubocop:disable Metrics/ClassLength -- because of the calculation and
+  #   formatting logic
   class Statistics
     # Make the extracted information accessible
     attr_reader :dirs, :statistics, :total
@@ -18,11 +18,11 @@ module Countless
     # @param dirs [Array<Hash{Symbol => Mixed}>] the configurations
     # @return [Countless::Statistics] the new instance
     #
-    # rubocop:disable Metrics/AbcSize because of the
-    #   directory/config resolving
-    # rubocop:disable Metrics/PerceivedComplexity dito
-    # rubocop:disable Metrics/CyclomaticComplexity dito
-    # rubocop:disable Metrics/MethodLength dito
+    # rubocop:disable Metrics/AbcSize -- because of the directory/config
+    #   resolving
+    # rubocop:disable Metrics/PerceivedComplexity -- dito
+    # rubocop:disable Metrics/CyclomaticComplexity -- dito
+    # rubocop:disable Metrics/MethodLength -- dito
     def initialize(*dirs)
       base_path = Countless.configuration.base_path
 
@@ -117,11 +117,11 @@ module Countless
     #
     # @return [String] the formatted code statistics
     #
-    # rubocop:disable Metrics/MethodLength because of the complex formatting
+    # rubocop:disable Metrics/MethodLength -- because of the complex formatting
     #   logic with fully dynamic columns widths
-    # rubocop:disable Metrics/PerceivedComplexity dito
-    # rubocop:disable Metrics/CyclomaticComplexity dito
-    # rubocop:disable Metrics/AbcSize dito
+    # rubocop:disable Metrics/PerceivedComplexity -- dito
+    # rubocop:disable Metrics/CyclomaticComplexity -- dito
+    # rubocop:disable Metrics/AbcSize -- dito
     def to_s
       col_sizes = {}
       rows = to_table.map do |row|
@@ -163,7 +163,7 @@ module Countless
     #
     # @return [Array<Array<String, Integer>, Symbol>] the raw table
     #
-    # rubocop:disable Metrics/MethodLength because of the table construction
+    # rubocop:disable Metrics/MethodLength -- because of the table construction
     def to_table
       table = [
         :splitter,
@@ -219,8 +219,8 @@ module Countless
       # @param methods [Integer] the initial methods count
       # @return [Countless::Statistics::Calculator] the new instance
       #
-      # rubocop:disable Metrics/ParameterLists because of the
-      #   various metrics we support
+      # rubocop:disable Metrics/ParameterLists -- because of the various
+      #   metrics we support
       def initialize(name: nil, lines: 0, code_lines: 0, comment_lines: 0,
                      classes: 0, methods: 0)
         @name = name
@@ -261,10 +261,10 @@ module Countless
       #
       # @param path [String] the path of the file
       #
-      # rubocop:disable Metrics/AbcSize because of the pattern search by file
-      #   extension and pattern matching on each line afterwards
-      # rubocop:disable Metrics/CyclomaticComplexity dito
-      # rubocop:disable Metrics/PerceivedComplexity dito
+      # rubocop:disable Metrics/AbcSize -- because of the pattern search by
+      #   file extension and pattern matching on each line afterwards
+      # rubocop:disable Metrics/CyclomaticComplexity -- dito
+      # rubocop:disable Metrics/PerceivedComplexity -- dito
       def add_details_by_file_path(path)
         all_patterns = Countless.configuration.detailed_stats_patterns
 

@@ -34,8 +34,8 @@ module Countless
       # @return [Hash{String => Hash{String => Mixed}] the raw CLOC
       #   YAML output
       #
-      # rubocop:disable Metrics/MethodLength because of the system
-      #   command preparation
+      # rubocop:disable Metrics/MethodLength -- because of the system command
+      #   preparation
       def raw_stats(*paths)
         cmd = [
           Countless.cloc_path,

@@ -11,7 +11,8 @@ module Countless
   #
   # Heavily stolen from: https://bit.ly/3nBS0aj
   #
-  # rubocop:disable Metrics/ClassLength because of the nested Annotation class
+  # rubocop:disable Metrics/ClassLength -- because of the nested Annotation
+  #   class
   class Annotations
     attr_reader :tag, :options, :dirs, :files, :annotations
 
@@ -124,7 +125,7 @@ module Countless
     #
     # @return [String] the formatted annotations
     #
-    # rubocop:disable Metrics/AbcSize because of the indentation logic
+    # rubocop:disable Metrics/AbcSize -- because of the indentation logic
     def to_s
       buf = []
       options[:indent] = annotations.flat_map do |_f, a|
