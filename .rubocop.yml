@@ -1,6 +1,9 @@
 require:
   - rubocop-rspec
 
+plugins:
+  - rubocop-rails
+
 Style/Documentation:
   Enabled: true
 
@@ -61,4 +64,9 @@ RSpec/FilePath:
 # Because +enqueued_jobs+ is a method not a memoized variable,
 # so when first evaluated it won't change.
 RSpec/ExpectChange:
+  Enabled: false
+
+# Because we support Rails applications as well as gems and non-Rails
+# applications, therefore the +:environment+ task is not always present
+Rails/RakeEnvironment:
   Enabled: false
