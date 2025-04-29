@@ -42,8 +42,8 @@ module Countless
         #
         # rubocop:disable Metrics/MethodLength -- because of the configuration
         #   assembling
-        # rubocop:disable Metrics/AbcSize -- dito
-        # rubocop:disable Metrics/CyclomaticComplexity -- dito
+        # rubocop:disable Metrics/AbcSize -- ditto
+        # rubocop:disable Metrics/CyclomaticComplexity -- ditto
         def statistic_directories
           conf = configuration
           pattern_suffix = "/**/*.{#{conf.stats_file_extensions.join(',')}}"

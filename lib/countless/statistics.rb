@@ -20,9 +20,9 @@ module Countless
     #
     # rubocop:disable Metrics/AbcSize -- because of the directory/config
     #   resolving
-    # rubocop:disable Metrics/PerceivedComplexity -- dito
-    # rubocop:disable Metrics/CyclomaticComplexity -- dito
-    # rubocop:disable Metrics/MethodLength -- dito
+    # rubocop:disable Metrics/PerceivedComplexity -- ditto
+    # rubocop:disable Metrics/CyclomaticComplexity -- ditto
+    # rubocop:disable Metrics/MethodLength -- ditto
     def initialize(*dirs)
       base_path = Countless.configuration.base_path
 
@@ -119,9 +119,9 @@ module Countless
     #
     # rubocop:disable Metrics/MethodLength -- because of the complex formatting
     #   logic with fully dynamic columns widths
-    # rubocop:disable Metrics/PerceivedComplexity -- dito
-    # rubocop:disable Metrics/CyclomaticComplexity -- dito
-    # rubocop:disable Metrics/AbcSize -- dito
+    # rubocop:disable Metrics/PerceivedComplexity -- ditto
+    # rubocop:disable Metrics/CyclomaticComplexity -- ditto
+    # rubocop:disable Metrics/AbcSize -- ditto
     def to_s
       col_sizes = {}
       rows = to_table.map do |row|
@@ -263,8 +263,8 @@ module Countless
       #
       # rubocop:disable Metrics/AbcSize -- because of the pattern search by
       #   file extension and pattern matching on each line afterwards
-      # rubocop:disable Metrics/CyclomaticComplexity -- dito
-      # rubocop:disable Metrics/PerceivedComplexity -- dito
+      # rubocop:disable Metrics/CyclomaticComplexity -- ditto
+      # rubocop:disable Metrics/PerceivedComplexity -- ditto
       def add_details_by_file_path(path)
         all_patterns = Countless.configuration.detailed_stats_patterns
 

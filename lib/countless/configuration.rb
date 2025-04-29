@@ -4,7 +4,7 @@ module Countless
   # The configuration for the countless gem.
   #
   # rubocop:disable Metrics/ClassLength -- because of the various defaults
-  # rubocop:disable Metrics/BlockLength -- dito
+  # rubocop:disable Metrics/BlockLength -- ditto
   class Configuration
     include ActiveSupport::Configurable
 
