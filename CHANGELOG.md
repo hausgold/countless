@@ -1,7 +1,11 @@
 ### next
 
-* Corrected some RuboCop glitches (#9)
-* Upgraded the rubocop dependencies (#10)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 1.5.1 (21 May 2025)
+
+* Corrected some RuboCop glitches ([#9](https://github.com/hausgold/countless/pull/9))
+* Upgraded the rubocop dependencies ([#10](https://github.com/hausgold/countless/pull/10))
 
 ### 1.5.0 (30 January 2025)
 
