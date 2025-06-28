@@ -234,7 +234,7 @@ module Countless
       #
       # @param options [Hash{Symbol => Mixed}] the additional options
       def to_s(options = {})
-        s = +"[#{line.to_s.rjust(options[:indent])}] "
+        s = "[#{line.to_s.rjust(options[:indent])}] "
         s << "[#{tag}] " if options[:tag]
         s << text
       end
