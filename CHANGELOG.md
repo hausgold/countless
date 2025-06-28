@@ -1,7 +1,11 @@
 ### next
 
-* Corrected some RuboCop glitches (#11)
-* Drop Ruby 2 and end of life Rails (<7.1) (#12)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.0.0 (28 June 2025)
+
+* Corrected some RuboCop glitches ([#11](https://github.com/hausgold/countless/pull/11))
+* Drop Ruby 2 and end of life Rails (<7.1) ([#12](https://github.com/hausgold/countless/pull/12))
 
 ### 1.5.1 (21 May 2025)
 
