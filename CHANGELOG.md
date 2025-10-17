@@ -1,7 +1,11 @@
 ### next
 
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.1.0 (17 October 2025)
+
 * Removed the require of `rspec/core/rake_task` on our Rake tasks file, as it's
-  no runtime dependency (#13)
+  no runtime dependency ([#13](https://github.com/hausgold/countless/pull/13))
 
 ### 2.0.0 (28 June 2025)
 
