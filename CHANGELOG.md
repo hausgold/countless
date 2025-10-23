@@ -1,6 +1,8 @@
 ### next
 
 * Added support for Rails 8.1 (#14)
+* Switched from `ActiveSupport::Configurable` to a custom implementation based
+  on `ActiveSupport::OrderedOptions` (#15)
 
 ### 2.1.0 (17 October 2025)
 
