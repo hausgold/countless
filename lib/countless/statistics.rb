@@ -225,7 +225,7 @@ module Countless
       # Parse and add statistics of a single file by path.
       #
       # @param path [String] the path of the file
-      # @param stats [Hash{Symbol => Integer}] addtional CLOC statistics
+      # @param stats [Hash{Symbol => Integer}] additional CLOC statistics
       def add_by_file_path(path, **stats)
         @lines += stats.fetch(:total, 0)
         @code_lines += stats.fetch(:code, 0)

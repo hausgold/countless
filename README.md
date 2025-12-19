@@ -17,7 +17,7 @@ with the gem package.
 - [Installation](#installation)
 - [Requirements](#requirements)
 - [Usage](#usage)
-  - [Addtional Configuration](#addtional-configuration)
+  - [Additional Configuration](#additional-configuration)
 - [Development](#development)
 - [Code of Conduct](#code-of-conduct)
 - [Contributing](#contributing)
@@ -50,7 +50,7 @@ $ bundle
 
 ## Usage
 
-You can configure the Countless gem in serveral ways, but the most common
+You can configure the Countless gem in several ways, but the most common
 usecase is to install its Rake tasks and configure it in order to work
 properly. Here comes a self descriptive example (within a Rakefile):
 
@@ -92,14 +92,14 @@ Afterwards the following Rake tasks are available to you:
   * **notes:custom**: Show notes for custom annotation (run via `bundle exec
     rake notes:custom ANNOTATION='NOTE'`)
 
-### Addtional Configuration
+### Additional Configuration
 
 ```ruby
 # All the configured values here represent the Gem defaults.
 Countless.configure do |config|
   # The base/root path of the project to work on. This path is used as a #
   # prefix to all relative path/file configurations. By default we check for a
-  # Rake invokation (Rakefile location), a Rails invokation (project root) or
+  # Rake invocation (Rakefile location), a Rails invocation (project root) or
   # fallback the the current working directory of the process.
   config.base_path = Dir.pwd
 
