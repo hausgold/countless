@@ -33,9 +33,6 @@ module Countless
       #   directories) to fetch the statistics for
       # @return [Hash{String => Hash{String => Mixed}] the raw CLOC
       #   YAML output
-      #
-      # rubocop:disable Metrics/MethodLength -- because of the system command
-      #   preparation
       def raw_stats(*paths)
         cmd = [
           Countless.cloc_path,
@@ -61,7 +58,6 @@ module Countless
         # Otherwise we use the CLOC produced YAML and parse it
         YAML.safe_load(stdout) || {}
       end
-      # rubocop:enable Metrics/MethodLength
     end
   end
 end

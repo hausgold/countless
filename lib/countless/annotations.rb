@@ -10,9 +10,6 @@ module Countless
   # of the line (or closing ERB comment tag) is considered to be their text.
   #
   # Heavily stolen from: https://bit.ly/3nBS0aj
-  #
-  # rubocop:disable Metrics/ClassLength -- because of the nested Annotation
-  #   class
   class Annotations
     attr_reader :tag, :options, :dirs, :files, :annotations
 
@@ -124,8 +121,6 @@ module Countless
     # Formats the found annotations.
     #
     # @return [String] the formatted annotations
-    #
-    # rubocop:disable Metrics/AbcSize -- because of the indentation logic
     def to_s
       buf = []
       options[:indent] = annotations.flat_map do |_f, a|
@@ -138,7 +133,6 @@ module Countless
       end
       buf.join("\n")
     end
-    # rubocop:enable Metrics/AbcSize
 
     # A single annotation representation.
     Annotation = Struct.new(:line, :tag, :text) do
@@ -240,5 +234,4 @@ module Countless
       end
     end
   end
-  # rubocop:enable Metrics/ClassLength
 end

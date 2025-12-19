@@ -3,9 +3,6 @@
 module Countless
   module Extensions
     # A top-level gem-module extension to handle configuration needs.
-    #
-    # rubocop:disable Metrics/BlockLength -- because this is how an
-    #   +ActiveSupport::Concern+ looks like
     module ConfigurationHandling
       extend ActiveSupport::Concern
 
@@ -39,11 +36,6 @@ module Countless
         # checked for code statistics.
         #
         # @return [Array<Hash{Symbol => Mixed}>] the statistics directories
-        #
-        # rubocop:disable Metrics/MethodLength -- because of the configuration
-        #   assembling
-        # rubocop:disable Metrics/AbcSize -- ditto
-        # rubocop:disable Metrics/CyclomaticComplexity -- ditto
         def statistic_directories
           conf = configuration
           pattern_suffix = "/**/*.{#{conf.stats_file_extensions.join(',')}}"
@@ -73,11 +65,7 @@ module Countless
 
           res.sort_by { |cur| [cur[:test].to_s, cur[:name]] }
         end
-        # rubocop:enable Metrics/MethodLength
-        # rubocop:enable Metrics/AbcSize
-        # rubocop:enable Metrics/CyclomaticComplexity
       end
     end
-    # rubocop:enable Metrics/BlockLength
   end
 end
