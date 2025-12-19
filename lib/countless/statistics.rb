@@ -4,9 +4,6 @@ module Countless
   # The source code statistics displaying handler.
   #
   # Heavily stolen from: https://bit.ly/3qpvgfu
-  #
-  # rubocop:disable Metrics/ClassLength -- because of the calculation and
-  #   formatting logic
   class Statistics
     # Make the extracted information accessible
     attr_reader :dirs, :statistics, :total
@@ -17,12 +14,6 @@ module Countless
     #
     # @param dirs [Array<Hash{Symbol => Mixed}>] the configurations
     # @return [Countless::Statistics] the new instance
-    #
-    # rubocop:disable Metrics/AbcSize -- because of the directory/config
-    #   resolving
-    # rubocop:disable Metrics/PerceivedComplexity -- ditto
-    # rubocop:disable Metrics/CyclomaticComplexity -- ditto
-    # rubocop:disable Metrics/MethodLength -- ditto
     def initialize(*dirs)
       base_path = Countless.configuration.base_path
 
@@ -47,10 +38,6 @@ module Countless
       @statistics = calculate_statistics
       @total = calculate_total if @dirs.length > 1
     end
-    # rubocop:enable Metrics/AbcSize
-    # rubocop:enable Metrics/PerceivedComplexity
-    # rubocop:enable Metrics/CyclomaticComplexity
-    # rubocop:enable Metrics/MethodLength
 
     # Calculate the total statistics of all sub-statistics for the configured
     # directories.
@@ -119,9 +106,6 @@ module Countless
     #
     # rubocop:disable Metrics/MethodLength -- because of the complex formatting
     #   logic with fully dynamic columns widths
-    # rubocop:disable Metrics/PerceivedComplexity -- ditto
-    # rubocop:disable Metrics/CyclomaticComplexity -- ditto
-    # rubocop:disable Metrics/AbcSize -- ditto
     def to_s
       col_sizes = {}
       rows = to_table.map do |row|
@@ -152,9 +136,6 @@ module Countless
       end.join("\n")
     end
     # rubocop:enable Metrics/MethodLength
-    # rubocop:enable Metrics/PerceivedComplexity
-    # rubocop:enable Metrics/CyclomaticComplexity
-    # rubocop:enable Metrics/AbcSize
 
     # Convert the code statistics to a processable table structure. Each
     # element in the resulting array is a single line, while array elements
@@ -162,8 +143,6 @@ module Countless
     # later by +#to_s+.
     #
     # @return [Array<Array<String, Integer>, Symbol>] the raw table
-    #
-    # rubocop:disable Metrics/MethodLength -- because of the table construction
     def to_table
       table = [
         :splitter,
@@ -181,7 +160,6 @@ module Countless
       table << code_test_stats_line
       table
     end
-    # rubocop:enable Metrics/MethodLength
 
     # Return the final meta statistics line.
     #
@@ -260,11 +238,6 @@ module Countless
       # the current calculator instance metrics.
       #
       # @param path [String] the path of the file
-      #
-      # rubocop:disable Metrics/AbcSize -- because of the pattern search by
-      #   file extension and pattern matching on each line afterwards
-      # rubocop:disable Metrics/CyclomaticComplexity -- ditto
-      # rubocop:disable Metrics/PerceivedComplexity -- ditto
       def add_details_by_file_path(path)
         all_patterns = Countless.configuration.detailed_stats_patterns
 
@@ -283,9 +256,6 @@ module Countless
           @methods += 1 if patterns[:method]&.match? line
         end
       end
-      # rubocop:enable Metrics/AbcSize
-      # rubocop:enable Metrics/CyclomaticComplexity
-      # rubocop:enable Metrics/PerceivedComplexity
 
       # Return the methods per classes.
       #
@@ -316,5 +286,4 @@ module Countless
       end
     end
   end
-  # rubocop:enable Metrics/ClassLength
 end

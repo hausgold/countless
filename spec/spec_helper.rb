@@ -7,14 +7,11 @@ require 'bundler/setup'
 require 'yaml'
 require 'ostruct'
 
-# rubocop:disable Style/OpenStructUse -- because its just a double for the gem,
-#   but we cannot use RSpec doubles in the global context here
 Rake = OpenStruct.new(
   application: OpenStruct.new(
     rakefile_location: File.expand_path(File.join(__dir__, '../'))
   )
 )
-# rubocop:enable Style/OpenStructUse
 
 require 'countless'
 
