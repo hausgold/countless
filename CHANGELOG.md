@@ -1,6 +1,6 @@
 ### next
 
-* TODO: Replace this bullet point with an actual description of a change.
+* Dropped Rails 7.1 support (#22)
 
 ### 2.6.0 (19 January 2026)
 
