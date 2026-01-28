@@ -1,6 +1,10 @@
 ### next
 
-* Dropped Rails 7.1 support (#22)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.7.0 (28 January 2026)
+
+* Dropped Rails 7.1 support ([#22](https://github.com/hausgold/countless/pull/22))
 
 ### 2.6.0 (19 January 2026)
 
