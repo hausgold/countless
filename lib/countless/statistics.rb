@@ -89,7 +89,7 @@ module Countless
     # @return [Integer] the total lines of code
     def calculate_code
       @statistics.values.reject { |conf| conf[:test] }
-                 .map { |conf| conf[:stats].code_lines }.sum
+                        .map { |conf| conf[:stats].code_lines }.sum
     end
 
     # Calculate the total lines of testing code.
@@ -97,7 +97,7 @@ module Countless
     # @return [Integer] the total lines of testing code
     def calculate_tests
       @statistics.values.select { |conf| conf[:test] }
-                 .map { |conf| conf[:stats].code_lines }.sum
+                        .map { |conf| conf[:stats].code_lines }.sum
     end
 
     # Convert the code statistics to a formatted string buffer.
