@@ -282,7 +282,7 @@ module Countless
         %i[
           name lines code_lines comment_lines
           classes methods m_over_c loc_over_m
-        ].each_with_object({}) { |key, memo| memo[key] = send(key) }
+        ].to_h { |key| [key, send(key)] }
       end
     end
   end
