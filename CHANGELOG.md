@@ -1,5 +1,9 @@
 ### next
 
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.11.1 (5 May 2026)
+
 * Corrected the readme
 
 ### 2.11.0 (4 May 2026)
