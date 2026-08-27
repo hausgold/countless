@@ -1,6 +1,10 @@
 ### next
 
-* Corrected some RuboCop glitches (#29)
+* TODO: Replace this bullet point with an actual description of a change.
+
+### 2.14.0 (27 August 2026)
+
+* Corrected some RuboCop glitches ([#29](https://github.com/hausgold/countless/pull/29))
 
 ### 2.13.0 (5 August 2026)
 
