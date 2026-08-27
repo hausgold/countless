@@ -3,7 +3,7 @@
 module Countless
   # The configuration for the countless gem.
   #
-  # rubocop:disable Metrics/BlockLength -- because of the various defaults
+  # rubocop:disable-next Metrics/BlockLength -- because of the various defaults
   class Configuration < ActiveSupport::OrderedOptions
     # Track our configurations settings (+Symbol+ keys) and their defaults as
     # lazy-loaded +Proc+'s values
@@ -241,5 +241,4 @@ module Countless
       }.deep_merge(additional_annotation_patterns)
     end
   end
-  # rubocop:enable Metrics/BlockLength
 end
